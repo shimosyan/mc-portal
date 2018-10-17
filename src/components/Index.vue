@@ -46,7 +46,7 @@
             <div class="card-body">
               <h5 class="card-title">ログイン中のメンバー</h5>
               <transition-group name="player" tag="div" class="list" appear>
-                <div v-for='player in server.players' :key='player.name' class="card card-body text-center" style="width: 10rem;">
+                <div v-for='player in server.players' :key='player.name' class="card card-body card-element text-center">
                   <img v-bind:src = "player.src" style="height: 64px; width: 64px; margin: 0 auto;" class="rounded"/>
                   <p class="card-text">{{ player.name }}</p>
                 </div>
@@ -123,6 +123,12 @@ export default {
   background-position: center 60%;
   color: #FFF;
   text-shadow:2px 2px 3px #000;
+}
+
+.card-element {
+  display: inline-flex;
+  margin: 0.5rem;
+  width: 10rem;
 }
 
 .player-enter-active, .player-leave-active {

@@ -128,7 +128,7 @@ export default {
 .card-element {
   display: inline-flex;
   margin: 0.5rem;
-  width: 10rem;
+  width: 9.6rem;
 }
 
 .player-enter-active, .player-leave-active {

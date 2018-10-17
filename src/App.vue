@@ -7,7 +7,8 @@
       <b-navbar-nav>
         <b-nav-item v-bind:to="{ name : 'About'}">このサーバーについて</b-nav-item>
         <b-nav-item v-bind:to="{ name : 'Rule'}">ルール</b-nav-item>
-        <b-nav-item href="http://micmnis.net:8123/" target="_blank">Dynmap <img class="icon" :src="imageSrc_newWindow" /></b-nav-item>
+        <b-nav-item v-bind:to="{ name : 'Mod'}">Modリスト</b-nav-item>
+        <b-nav-item href="/minecraft/map/" target="_blank">Dynmap <img class="icon" :src="imageSrc_newWindow" /></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

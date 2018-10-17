@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/components/Index'
 import About from '@/components/About'
 import Rule from '@/components/Rule'
+import Mod from '@/components/Mod'
 import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
@@ -24,6 +25,11 @@ export default new Router({
       path: '/rule',
       name: 'Rule',
       component: Rule
+    },
+    {
+      path: '/mod',
+      name: 'Mod',
+      component: Mod
     },
     {
       path: '/HelloWorld',

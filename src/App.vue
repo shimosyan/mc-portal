@@ -42,15 +42,22 @@ export default {
   color: #2c3e50;
 }
 
-.logo img{
+.logo img {
   width: 24px;
   height: auto;
   vertical-align: middle;
 }
 
-.icon{
+.icon {
   width: 12px;
   height: auto;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 320px) {
+  .navbar-brand{
+    margin-right: 0.2rem;
+    font-size: 1rem;
+  }
 }
 </style>

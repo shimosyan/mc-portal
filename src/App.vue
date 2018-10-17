@@ -54,7 +54,7 @@ export default {
   vertical-align: middle;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .navbar-brand{
     margin-right: 0.2rem;
     font-size: 1rem;

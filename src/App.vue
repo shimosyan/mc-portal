@@ -2,12 +2,12 @@
 <div>
   <b-navbar toggleable="md" type="dark" variant="success">
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-navbar-brand v-bind:to="{ name : 'Index'}" class="logo"><img :src="imageSrc_navLogo"> Minecraft#しもしゃん鯖</b-navbar-brand>
+    <b-navbar-brand to="/" class="logo"><img :src="imageSrc_navLogo"> Minecraft#しもしゃん鯖</b-navbar-brand>
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav>
-        <b-nav-item v-bind:to="{ name : 'About'}">このサーバーについて</b-nav-item>
-        <b-nav-item v-bind:to="{ name : 'Rule'}">ルール</b-nav-item>
-        <b-nav-item v-bind:to="{ name : 'Mod'}">Modリスト</b-nav-item>
+        <b-nav-item to="/about">このサーバーについて</b-nav-item>
+        <b-nav-item to="/rule">ルール</b-nav-item>
+        <b-nav-item to="/mod">Modリスト</b-nav-item>
         <b-nav-item href="/minecraft/map/" target="_blank">Dynmap <img class="icon" :src="imageSrc_newWindow" /></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
@@ -24,13 +24,13 @@
 <script>
 export default {
   name: 'App',
-  data () {
+  data() {
     return {
       imageSrc_navLogo: require('./assets/navLogo.png'),
-      imageSrc_newWindow: require('./assets/new_window.svg')
-    }
-  }
-}
+      imageSrc_newWindow: require('./assets/new_window.svg'),
+    };
+  },
+};
 </script>
 
 <style>
@@ -61,3 +61,4 @@ export default {
   }
 }
 </style>
+

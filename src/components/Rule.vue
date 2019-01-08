@@ -21,9 +21,11 @@
   </div> <!-- /container -->
 </template>
 
-<script>
-export default {
-  name: 'Rule'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Rule extends Vue {
 }
 </script>
 

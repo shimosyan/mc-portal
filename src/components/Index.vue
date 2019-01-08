@@ -72,47 +72,48 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
   name: 'Index',
-  data () {
+  data() {
     return {
       users: null,
       server: {
         server_status: null,
         server_address: null,
         server_version: null,
-        now_player: null
-      }
-    }
+        now_player: null,
+      },
+    };
   },
-  mounted () {
+  mounted() {
     axios.get('https://micmnis.net/minecraft/api/getWhitelist.php')
-      .then(function (response) {
-        this.users = response.data
-      }.bind(this))
-      .catch(function (error) {
-        console.log(error)
-      })
+      .then(
+        function(response) {
+          this.users = response.data;
+        }.bind(this),
+      );
 
-    var self = this
-    setInterval(function () {
+    const self = this;
+
+    setInterval(() => {
       axios.get('https://micmnis.net/minecraft/api/getServerinfo.php')
-        .then(function (response) {
-          this.server = response.data
-        }.bind(self))
-        .catch(function (error) {
+        .then(
+          function(response) {
+            this.server = response.data;
+          }.bind(self),
+        )
+        .catch((error) => {
           this.server = {
             server_status: false,
             server_address: null,
             server_version: null,
-            now_player: null
-          }
-          console.log(error)
-        })
-    }, 1000)
-  }
-}
+            now_player: null,
+          };
+        });
+    }, 1000);
+  },
+};
 </script>
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->

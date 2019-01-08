@@ -230,9 +230,11 @@
   </div> <!-- /container -->
 </template>
 
-<script>
-export default {
-  name: 'Mod'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Mod extends Vue {
 }
 </script>
 

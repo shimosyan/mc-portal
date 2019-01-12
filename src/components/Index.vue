@@ -42,17 +42,19 @@
               </tr>
             </tbody>
           </table>
-          <div class="card" v-if="server.now_player > 0">
-            <div class="card-body">
-              <h5 class="card-title">ログイン中のメンバー</h5>
-              <transition-group name="player" tag="div" class="list" appear>
-                <div v-for='player in server.players' :key='player.name' class="card card-body card-element text-center">
-                  <img v-bind:src = "player.src" style="height: 64px; width: 64px; margin: 0 auto;" class="rounded"/>
-                  <p class="card-text">{{ player.name }}</p>
-                </div>
-              </transition-group>
+          <transition name="fade">
+            <div class="card" v-if="server.now_player > 0">
+              <div class="card-body">
+                <h5 class="card-title">ログイン中のメンバー</h5>
+                <transition-group name="player" tag="div" class="list" appear>
+                  <div v-for='player in server.players' :key='player.name' class="card card-body card-element text-center">
+                    <img v-bind:src = "player.src" class="rounded"/>
+                    <p class="card-text">{{ player.name }}</p>
+                  </div>
+                </transition-group>
+              </div>
             </div>
-          </div>
+          </transition>
         </div>
         <div class='col-md-4 border-right'>
           <h2>参加者リスト</h2>
@@ -130,6 +132,19 @@ export default {
   display: inline-flex;
   margin: 0.5rem;
   width: 9.6rem;
+}
+
+.card-element > img {
+  height: 64px;
+  width: 64px;
+  margin: 0 auto;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 .player-enter-active, .player-leave-active {

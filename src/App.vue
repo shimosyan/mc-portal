@@ -1,23 +1,31 @@
 <template>
 <div>
-  <b-navbar toggleable="md" type="dark" variant="success">
-    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-navbar-brand to="/" class="logo"><img :src="imageSrc_navLogo"> Minecraft#しもしゃん鯖</b-navbar-brand>
-    <b-collapse is-nav id="nav_collapse">
-      <b-navbar-nav>
-        <b-nav-item to="/about">このサーバーについて</b-nav-item>
-        <b-nav-item to="/rule">ルール</b-nav-item>
-        <b-nav-item to="/mod">Modリスト</b-nav-item>
-        <b-nav-item href="/minecraft/map/" target="_blank">Dynmap <img class="icon" :src="imageSrc_newWindow" /></b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
+  <header>
+    <b-navbar toggleable="md" type="dark" variant="success">
+      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+      <b-navbar-brand to="/" class="logo"><img :src="imageSrc_navLogo"> Minecraft#しもしゃん鯖</b-navbar-brand>
+      <b-collapse is-nav id="nav_collapse">
+        <b-navbar-nav>
+          <b-nav-item to="/about">このサーバーについて</b-nav-item>
+          <b-nav-item to="/rule">ルール</b-nav-item>
+          <b-nav-item to="/mod">Modリスト</b-nav-item>
+          <b-nav-item href="/minecraft/map/" target="_blank">Dynmap <img class="icon" :src="imageSrc_newWindow" /></b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+  </header>
 
   <main role="main">
     <div id="app">
       <router-view/>
     </div>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">Copyright © 2011-{{ year }} <a href="/">MICMNIS</a> All Rights Reserved.</p>
+    </div>
+  </footer>
 </div>
 </template>
 
@@ -28,6 +36,7 @@ export default {
     return {
       imageSrc_navLogo: require('./assets/navLogo.png'),
       imageSrc_newWindow: require('./assets/new_window.svg'),
+      year: new Date().getFullYear(),
     };
   },
 };

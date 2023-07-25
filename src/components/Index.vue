@@ -11,7 +11,7 @@
     <div class='container'>
       <!-- Example row of columns -->
       <div class='row'>
-        <div class='col-md-8 border-right'>
+        <div class="col-md-12">
           <h2>現在のサーバーについて</h2>
 
           <table class="table">
@@ -21,12 +21,6 @@
                 <td v-if="server.server_status === null">取得中...</td>
                 <td v-else-if="server.server_status === true"><span class="text-success">●</span> オンライン</td>
                 <td v-else><span class="text-danger">●</span> オフライン</td>
-              </tr>
-              <tr>
-                <td>サーバーアドレス</td>
-                <td v-if="server.server_status === null">取得中...</td>
-                <td v-else-if="server.server_address !== null">{{ server.server_address }}</td>
-                <td v-else>取得できません。</td>
               </tr>
               <tr>
                 <td>サーバーバージョン</td>
@@ -56,15 +50,6 @@
             </div>
           </transition>
         </div>
-        <div class='col-md-4 border-right'>
-          <h2>参加者リスト</h2>
-          <ul>
-            <li v-for='item in users' :key='item.uuid'>
-              <img v-bind:src = "item.src" /> {{ item.name }}
-            </li>
-          </ul>
-          <p><router-link class='btn btn-secondary' to='/about' role='button'>参加について &raquo;</router-link></p>
-        </div>
       </div>
 
       <hr>
@@ -89,17 +74,10 @@ export default {
     };
   },
   mounted() {
-    axios.get('https://micmnis.net/minecraft/api/getWhitelist.php')
-      .then(
-        function(response) {
-          this.users = response.data;
-        }.bind(this),
-      );
-
     const self = this;
 
     setInterval(() => {
-      axios.get('https://micmnis.net/minecraft/api/getServerinfo.php')
+      axios.get('/api/getServerinfo.php')
         .then(
           function(response) {
             this.server = response.data;

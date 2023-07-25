@@ -8,8 +8,7 @@
         <b-navbar-nav>
           <b-nav-item to="/about">このサーバーについて</b-nav-item>
           <b-nav-item to="/rule">ルール</b-nav-item>
-          <b-nav-item to="/mod">Modリスト</b-nav-item>
-          <b-nav-item href="/minecraft/map/" target="_blank">Dynmap <img class="icon" :src="imageSrc_newWindow" /></b-nav-item>
+          <!--<b-nav-item href="/minecraft/map/" target="_blank">Dynmap <img class="icon" :src="imageSrc_newWindow" /></b-nav-item>-->
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

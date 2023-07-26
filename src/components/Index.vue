@@ -4,14 +4,14 @@
     <div class='jumbotron'>
       <div class='container'>
         <h1 class='display-4'>MICMNIS Minecraft</h1>
-        <p>This is MOD server of Minecraft. It includes industrial, agricultural, railroad, aviation and Japanese elements. Let's make the world!</p>
+        <p>This is Minecraft Game Server. Let's make the world!</p>
       </div>
     </div>
 
     <div class='container'>
       <!-- Example row of columns -->
       <div class='row'>
-        <div class="col-md-12">
+        <div class='col-md-8 border-right'>
           <h2>現在のサーバーについて</h2>
 
           <table class="table">
@@ -50,6 +50,15 @@
             </div>
           </transition>
         </div>
+        <div class='col-md-4 border-right'>
+          <h2>参加者リスト</h2>
+          <ul>
+            <li v-for='item in users' :key='item.uuid'>
+              <img v-bind:src = "item.src" /> {{ item.name }}
+            </li>
+          </ul>
+          <p><router-link class='btn btn-secondary' to='/about' role='button'>参加について &raquo;</router-link></p>
+        </div>
       </div>
 
       <hr>
@@ -74,6 +83,13 @@ export default {
     };
   },
   mounted() {
+    axios.get('/api/getWhitelist.php')
+      .then(
+        function(response) {
+          this.users = response.data;
+        }.bind(this),
+      );
+
     const self = this;
 
     setInterval(() => {
@@ -91,7 +107,7 @@ export default {
             now_player: null,
           };
         });
-    }, 1000);
+    }, 5000);
   },
 };
 </script>

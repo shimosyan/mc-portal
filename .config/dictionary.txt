@@ -1,0 +1,4 @@
+Dynmap
+MICMNIS
+Serverinfo
+toggleable

@@ -4,12 +4,20 @@
     <div class='jumbotron'>
       <div class='container'>
         <h1 class='display-4'>MICMNIS Minecraft</h1>
-        <p>This is MOD server of Minecraft. It includes industrial, agricultural, railroad, aviation and Japanese elements. Let's make the world!</p>
+        <p>This is Minecraft Game Server. Let's make the world!</p>
       </div>
     </div>
 
     <div class='container'>
       <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <h2>注意</h2>
+          <p>このサーバーは試験運用中です。</p>
+          <p>予告なく仕様やルールの変更、サーバーの停止等がありますのでご了承ください。</p>
+        </div>
+      </div>
+      <hr>
       <div class='row'>
         <div class='col-md-8 border-right'>
           <h2>現在のサーバーについて</h2>
@@ -21,12 +29,6 @@
                 <td v-if="server.server_status === null">取得中...</td>
                 <td v-else-if="server.server_status === true"><span class="text-success">●</span> オンライン</td>
                 <td v-else><span class="text-danger">●</span> オフライン</td>
-              </tr>
-              <tr>
-                <td>サーバーアドレス</td>
-                <td v-if="server.server_status === null">取得中...</td>
-                <td v-else-if="server.server_address !== null">{{ server.server_address }}</td>
-                <td v-else>取得できません。</td>
               </tr>
               <tr>
                 <td>サーバーバージョン</td>
@@ -89,7 +91,7 @@ export default {
     };
   },
   mounted() {
-    axios.get('https://micmnis.net/minecraft/api/getWhitelist.php')
+    axios.get('/api/getWhitelist.php')
       .then(
         function(response) {
           this.users = response.data;
@@ -99,7 +101,7 @@ export default {
     const self = this;
 
     setInterval(() => {
-      axios.get('https://micmnis.net/minecraft/api/getServerinfo.php')
+      axios.get('/api/getServerinfo.php')
         .then(
           function(response) {
             this.server = response.data;
@@ -113,7 +115,7 @@ export default {
             now_player: null,
           };
         });
-    }, 1000);
+    }, 5000);
   },
 };
 </script>

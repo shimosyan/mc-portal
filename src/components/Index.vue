@@ -10,6 +10,14 @@
 
     <div class='container'>
       <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <h2>注意</h2>
+          <p>このサーバーは試験運用中です。</p>
+          <p>予告なく仕様やルールの変更、サーバーの停止等がありますのでご了承ください。</p>
+        </div>
+      </div>
+      <hr>
       <div class='row'>
         <div class='col-md-8 border-right'>
           <h2>現在のサーバーについて</h2>

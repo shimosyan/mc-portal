@@ -51,6 +51,15 @@ export default {
   color: #2c3e50;
 }
 
+p {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  margin-top: 2rem;
+}
+
 .logo img {
   width: 24px;
   height: auto;

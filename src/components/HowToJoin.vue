@@ -17,7 +17,7 @@
         <p>Shift キーを押したまま、Cloudflared を右クリックしてください。「パスとしてコピー」という選択肢があるのでそれをクリックします。これでクリップボードに Cloudflared のファイルパスが保存されます。</p>
         <p>続いて、Windows のアプリケーション一覧から「ターミナル」または「コマンドプロンプト」を開いてください。</p>
         <p>黒、または紺色の画面が表示されるので、Cloudflared のファイルパスを貼り付けします。</p>
-        <p>続いて、太字の「<span style="font-weight: bold;"> access tcp --hostname minecraft-game.micmnis.net --url localhost:25565</span>」をコピーして Cloudflared のファイルパスの続きに貼り付けします。このときファイルパスと <span style="font-weight: bold;">access</span> の間に一つスペースがあるようにしてください。</p>
+        <p>続いて、太字の「<span style="font-weight: bold;"> access tcp --hostname minecraft-game.cube-unit.net --url localhost:25565</span>」をコピーして Cloudflared のファイルパスの続きに貼り付けします。このときファイルパスと <span style="font-weight: bold;">access</span> の間に一つスペースがあるようにしてください。</p>
         <p>ここまで終わったらエンターキーを押します。</p>
         <p>黒、または紺色の画面で「(日付)  INF Start Websocket listener host=localhost:25565」と表示されたら準備完了です。この画面はゲーム終了まで閉じてはいけません。</p>
 

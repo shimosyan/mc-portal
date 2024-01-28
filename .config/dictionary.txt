@@ -1,5 +1,5 @@
 Cloudflared
 Dynmap
-MICMNIS
+Cube-Unit
 Serverinfo
 toggleable

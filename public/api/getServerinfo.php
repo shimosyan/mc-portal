@@ -43,7 +43,7 @@ if ($players != false) {
 $data = array
 (
   'server_status'  => true,
-  'server_address' => 'minecraft.micmnis.net',
+  'server_address' => 'minecraft.cube-unit.net',
   'server_version' => $info['Version'],
   'game_type'      => $info['GameType'],
   'now_player'     => $info['Players'],

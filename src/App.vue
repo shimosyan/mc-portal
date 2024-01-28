@@ -23,7 +23,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="text-muted">Copyright © 2011-{{ year }} <a href="https://micmnis.net/">MICMNIS</a> All Rights Reserved.</p>
+      <p class="text-muted">Copyright © 2011-{{ year }} <a href="https://cube-unit.net/">Cube-Unit</a> All Rights Reserved.</p>
     </div>
   </footer>
 </div>

@@ -3,7 +3,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class='jumbotron'>
       <div class='container'>
-        <h1 class='display-4'>MICMNIS Minecraft</h1>
+        <h1 class='display-4'>Cube-Unit Minecraft</h1>
         <p>This is Minecraft Game Server. Let's make the world!</p>
       </div>
     </div>
